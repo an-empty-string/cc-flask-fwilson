@@ -31,7 +31,7 @@ def require_login(f):
     def wrapped(*args, **kwargs):
         if "username" in session:
             return f(*args, **kwargs)
-        return redirect(url_for("login", _next=request.path))
+        return redirect(url_for("skel.login", _next=request.path))
     return wrapped
 
 ## CSRF
