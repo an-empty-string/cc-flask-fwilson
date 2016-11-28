@@ -18,4 +18,4 @@ ready to run.
 - [ ] supervisord configuration
 - [ ] nginx configuration
 - [ ] fabfile
-- [ ] requirements.txt
+- [x] requirements.txt
