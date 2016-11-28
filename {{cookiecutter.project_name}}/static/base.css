@@ -1,0 +1,31 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1.7;
+
+    background-color: #eee;
+    color: #222;
+}
+
+.container {
+    max-width: 40em;
+    margin: auto;
+}
+
+.content {
+    margin-top: 10px;
+}
+
+.messages {
+    background-color: #ddd;
+}
+
+a, a:visited {
+    color: #33c;
+}
