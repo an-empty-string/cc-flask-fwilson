@@ -1,4 +1,7 @@
 {
     "project_name": "app",
-    "auth_endpoint": "https://auth.fwilson.me"
+    "auth_endpoint": "https://auth.fwilson.me",
+    "app_path": "/home/app/deployed",
+    "app_user": "app",
+    "app_domain": "{{ cookiecutter.project_name }}.fwilson.me"
 }

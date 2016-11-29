@@ -15,7 +15,7 @@ ready to run.
 
 ## TODO
 
-- [ ] supervisord configuration
-- [ ] nginx configuration
+- [x] supervisord configuration
+- [x] nginx configuration
 - [ ] fabfile
 - [x] requirements.txt

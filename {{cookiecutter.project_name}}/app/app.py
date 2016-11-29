@@ -5,7 +5,7 @@ from . import utils, models, skel
 from flask import Flask, flash, redirect, render_template, request, session, url_for
 
 app = Flask(__name__)
-app.secret_key = os.getenv("SECRET")
+app.secret_key = os.getenv("SECRET", os.urandom(32))
 
 app.register_blueprint(skel.blueprint)
 
