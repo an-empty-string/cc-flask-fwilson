@@ -10,7 +10,11 @@ def deploy():
 
     sudo("rm -rf {{ cookiecutter.app_path }}/{{ cookiecutter.project_name }}")
     sudo("mkdir -p {{ cookiecutter.app_path }}/{{ cookiecutter.project_name }}")
-    upload_project(remote_dir="{{ cookiecutter.app_path }}", use_sudo=True)
+    local("tar -czf /tmp/deploy.tar.gz app")
+    put("/tmp/deploy.tar.gz", "/tmp/deploy.tar.gz")
+    sudo("tar xzf /temp/deploy.tar.gz {{ cookiecutter.app_path }}/{{ cookiecutter.project_name }}")
+    local("rm /tmp/deploy.tar.gz")
+    run("/tmp/deploy.tar.gz")
     sudo("chown -R {{ cookiecutter.app_user }} {{ cookiecutter.app_path }}/{{ cookiecutter.project_name }}")
 
     sudo("supervisorctl update")
