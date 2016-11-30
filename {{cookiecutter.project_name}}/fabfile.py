@@ -12,9 +12,9 @@ def deploy():
     sudo("mkdir -p {{ cookiecutter.app_path }}/{{ cookiecutter.project_name }}")
     local("tar -czf /tmp/deploy.tar.gz app")
     put("/tmp/deploy.tar.gz", "/tmp/deploy.tar.gz")
-    sudo("tar xzf /tmp/deploy.tar.gz {{ cookiecutter.app_path }}/{{ cookiecutter.project_name }}")
+    sudo("tar xzf /tmp/deploy.tar.gz -C {{ cookiecutter.app_path }}/{{ cookiecutter.project_name }}")
     local("rm /tmp/deploy.tar.gz")
-    run("/tmp/deploy.tar.gz")
+    run("rm /tmp/deploy.tar.gz")
     sudo("chown -R {{ cookiecutter.app_user }} {{ cookiecutter.app_path }}/{{ cookiecutter.project_name }}")
 
     sudo("supervisorctl update")
