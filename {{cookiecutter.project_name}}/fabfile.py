@@ -1,6 +1,6 @@
 from fabric.api import env
 from fabric.contrib.project import upload_project
-from fabric.operations import put, run, sudo
+from fabric.operations import put, run, sudo, local
 
 env.hosts = ["{{ cookiecutter.app_deploy_target }}"]
 
